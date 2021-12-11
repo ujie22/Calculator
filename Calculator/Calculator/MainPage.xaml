@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculator.MainPage">
+    <StackLayout Padding="5">
+        <Grid Padding="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="110" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+                <RowDefinition Height="90" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition Width="90" />
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <!--
+            ClearAll:清除
+            BtnNum_Clicked:數字鍵
+            BtnOperation_Clicked:運算符號鍵
+            BtnDelete_Clicked:刪除數字鍵
+            BtnEqual_Clicked:等號
+            -->
+            <Label x:Name="Result"  BackgroundColor="#D3D3D3" FontAttributes="Bold" HorizontalTextAlignment="End" FontSize="55" Text="0" Grid.Row="0" Grid.ColumnSpan="4" />
+
+            <Button Text="C" Grid.Row="1" Grid.ColumnSpan="2" FontSize="20" BackgroundColor="#FA8072" Pressed="ClearAll"></Button>
+            <Button Text="---" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="2" FontSize="20" BackgroundColor="#D3D3D3" Clicked="BtnDelete_Clicked"></Button>
+            <Button  Text="7" Grid.Row="2" Grid.Column="0" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="8" Grid.Row="2" Grid.Column="1" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="9" Grid.Row="2" Grid.Column="2" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="-" Grid.Row="2" Grid.Column="3" FontSize="50" BackgroundColor="#B8DDC8" Clicked="BtnOperation_Clicked"/>
+
+            <Button  Text="4" Grid.Row="3" Grid.Column="0" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="5" Grid.Row="3" Grid.Column="1" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="6" Grid.Row="3" Grid.Column="2"  FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="+" Grid.Row="3" Grid.Column="3"  FontSize="40" BackgroundColor="#B8DDC8" Clicked="BtnOperation_Clicked"/>
+
+            <Button  Text="1" Grid.Row="4" Grid.Column="0" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="2" Grid.Row="4" Grid.Column="1" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="3" Grid.Row="4" Grid.Column="2" FontSize="40" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="x" Grid.Row="4" Grid.Column="3"  FontSize="40" BackgroundColor="#B8DDC8" Clicked="BtnOperation_Clicked"/>
+            <Button  Text="." Grid.Row="5" Grid.Column="0" FontSize="45" BackgroundColor="#B8DDC8" Clicked="BtnNum_Clicked"/>
+            <Button  Text="0" Grid.Row="5" Grid.Column="1" FontSize="45" BackgroundColor="#F5DEB3" Clicked="BtnNum_Clicked"/>
+            <Button  Text="/" Grid.Row="5" Grid.Column="2" FontSize="45" BackgroundColor="#B8DDC8" Clicked="BtnOperation_Clicked"/>
+            <Button  Text="=" Grid.Row="5" Grid.Column="3" FontSize="45" BackgroundColor="#B8DDC8" Clicked="BtnEqual_Clicked"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
